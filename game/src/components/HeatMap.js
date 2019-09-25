@@ -207,10 +207,10 @@ class HeatMap extends React.Component {
       //   })
       //   return distances;
       // }    
-    // google.maps.event.addListener(this.map, 'mousemove', event => {
-    //   console.log(event.latLng)
-    //   // console.log(getCoefficient(event.latLng, this.heatmapData1, this.heatmapData2))
-    // });
+      // google.maps.event.addListener(this.map, 'mousemove', event => {
+      //   console.log(event.latLng)
+      //   // console.log(getCoefficient(event.latLng, this.heatmapData1, this.heatmapData2))
+      // });
 
     google.maps.event.addListener(this.map, 'click', event => {
       this.myPosition = {
