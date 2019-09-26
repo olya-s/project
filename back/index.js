@@ -305,7 +305,8 @@ setInterval(async () => {
                 await userlog.update({weight: (userWeight > 10000 ? 10000 : userWeight < 0 ? 0 : userWeight)});  
               }            
             });
-            if(userWeight > 0){
+            let minDist = Math.min(...coef.distances);
+            if(userWeight > 0 && minDist > 150){
               (team.title === 'friend') ? userWeight += coef.k : userWeight -= coef.k;
               await userlog.update({weight: (userWeight > 10000 ? 10000 : userWeight < 0 ? 0 : userWeight)});
             }
