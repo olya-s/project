@@ -17,7 +17,7 @@ class Lobby extends React.Component{
   }
 
   componentDidMount(){
-    this.props.getInformationThunk().then(() => this.setState({inf: Object.entries(this.props.inform)}));
+    this.props.getInformationThunk().then(() => this.props.inform && this.setState({inf: Object.entries(this.props.inform)}));
     navigator.geolocation.getCurrentPosition((position)=> {
       this.setState({lat: position.coords.latitude, lng: position.coords.longitude})
     });
